@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relFuncionarios" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="389bae59-e6b4-46a7-8395-6e73a086cb3d">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relProdutos" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="389bae59-e6b4-46a7-8395-6e73a086cb3d">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -9,58 +9,28 @@
 			<style mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
 		</conditionalStyle>
 	</style>
+	<style name="cabecalho">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2==0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#030305"/>
+		</conditionalStyle>
+	</style>
 	<queryString>
-		<![CDATA[select * from tb_funcionarios]]>
+		<![CDATA[select p.id, p.descricao,p.preco,p.qtd_estoque,f.nome from tb_produtos as p inner join tb_fornecedores as f on(p.for_id=f.id)]]>
 	</queryString>
 	<field name="id" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
+	<field name="descricao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="preco" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qtd_estoque" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
 	<field name="nome" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="rg" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="cpf" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="email" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="senha" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="cargo" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="nivel_acesso" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="telefone" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="celular" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="cep" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="endereco" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="numero" class="java.lang.Integer">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="complemento" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="bairro" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="cidade" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="estado" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<background>
@@ -75,69 +45,91 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="36" splitType="Stretch">
+		<band height="35" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="555" height="35" uuid="f70e6ddb-0bd2-40ce-876d-1cd396a256f4"/>
 				<textElement textAlignment="Center">
 					<font size="24" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Relatório de Funcionários]]></text>
+				<text><![CDATA[Relatório de Produtos]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
 	<columnHeader>
 		<band height="25" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="63" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="5dcbd7c9-0f72-438d-881a-9eafa7bb31b6"/>
+				<reportElement mode="Opaque" x="0" y="0" width="45" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="977df9d8-53ec-4055-80e2-89500d2866d4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Cod]]></text>
+				<text><![CDATA[id]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="148" y="0" width="142" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="5e332d14-9e39-48c1-80f3-e57ec6765979"/>
+				<reportElement mode="Opaque" x="48" y="0" width="110" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="7a704072-545c-4d2c-91fa-927c1b909cc3"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Nome]]></text>
+				<text><![CDATA[descricao]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="292" y="0" width="263" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="2f941fd6-be89-435a-b14c-e08312d5aba0"/>
+				<reportElement mode="Opaque" x="159" y="0" width="106" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="c570c296-bb5d-4a8f-844e-29a14ac72bd8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Endereço]]></text>
+				<text><![CDATA[preco]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="64" y="0" width="81" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="b35e831a-1c30-45ea-bddc-11883dcccd3f"/>
+				<reportElement mode="Opaque" x="266" y="0" width="110" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="df45e7f3-05f7-4561-884f-36f4c7de10eb"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[cpf]]></text>
+				<text><![CDATA[qtd_estoque]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="377" y="0" width="178" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="d97337e8-3a7a-4af6-af2c-778de49b8a2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[nome]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="30" splitType="Stretch">
 			<textField>
-				<reportElement style="linhas_alternadas" x="148" y="1" width="142" height="29" uuid="e10b4239-53df-40d6-9b6c-44efc9ab4336"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="linhas_alternadas" x="0" y="1" width="63" height="29" uuid="690bbea0-1826-48a7-a909-4a9204b3b728"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<reportElement style="linhas_alternadas" x="0" y="0" width="45" height="29" uuid="2638a001-b311-4d4c-81eb-d669624f011f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="linhas_alternadas" x="292" y="1" width="263" height="29" uuid="ea2ea511-a8b7-4b93-96d5-6c62c67f368a"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+				<reportElement style="linhas_alternadas" x="48" y="0" width="110" height="29" uuid="e4858b8d-6186-4386-b715-446ef0ae1aa6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="linhas_alternadas" x="64" y="1" width="81" height="29" uuid="ad1153e3-f8d1-4408-909e-cb78032f5304"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+				<reportElement style="linhas_alternadas" x="159" y="0" width="106" height="29" uuid="25c8cfd8-4a1f-4724-840e-0f40c152e2f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{preco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="linhas_alternadas" x="266" y="0" width="110" height="29" uuid="b3b13e45-4065-4e72-a6c7-1209cbe51e23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtd_estoque}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="linhas_alternadas" x="377" y="0" width="178" height="29" uuid="8353b773-6884-4157-8b64-fbc3a48e652c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
