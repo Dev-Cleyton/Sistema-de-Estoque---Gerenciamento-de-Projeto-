@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relFuncionarios" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="389bae59-e6b4-46a7-8395-6e73a086cb3d">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relFornecedores" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="389bae59-e6b4-46a7-8395-6e73a086cb3d">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -10,7 +10,7 @@
 		</conditionalStyle>
 	</style>
 	<queryString>
-		<![CDATA[select * from tb_funcionarios]]>
+		<![CDATA[select * from tb_fornecedores order by nome]]>
 	</queryString>
 	<field name="id" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -18,22 +18,10 @@
 	<field name="nome" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="rg" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="cpf" class="java.lang.String">
+	<field name="cnpj" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="email" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="senha" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="cargo" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="nivel_acesso" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="telefone" class="java.lang.String">
@@ -81,72 +69,87 @@
 				<textElement textAlignment="Center">
 					<font size="24" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Relatório de Funcionários]]></text>
+				<text><![CDATA[Relatório de Fornecedores]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="25" splitType="Stretch">
+		<band height="36" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="143" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="5dcbd7c9-0f72-438d-881a-9eafa7bb31b6"/>
+				<reportElement mode="Opaque" x="40" y="2" width="84" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="19e54b05-31b3-4fcb-9e81-b5d9b105d404"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12"/>
-				</textElement>
-				<text><![CDATA[id]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="143" y="0" width="149" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="5e332d14-9e39-48c1-80f3-e57ec6765979"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12"/>
+					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[nome]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="292" y="0" width="263" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="2f941fd6-be89-435a-b14c-e08312d5aba0"/>
+				<reportElement mode="Opaque" x="124" y="2" width="113" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="fc4b08cc-4914-4dba-aecb-78aa9a61be37"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12"/>
+					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[endereço]]></text>
+				<text><![CDATA[cnpj]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="237" y="2" width="163" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="ddc12ed4-d122-4a5a-8fb9-b4d06be0a440"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="400" y="2" width="63" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="ce45152b-8559-45e3-b949-8742b7f22b31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[cep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="463" y="2" width="92" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="c6baef8b-1de2-4e51-a9fb-532148423edb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[celular]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="2" width="40" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="e9dc3aa0-1858-4c00-9065-a90370ef6d30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="30" splitType="Stretch">
+		<band height="29" splitType="Stretch">
 			<textField>
-				<reportElement style="linhas_alternadas" x="143" y="1" width="149" height="29" uuid="e10b4239-53df-40d6-9b6c-44efc9ab4336"/>
-				<box bottomPadding="0">
-					<pen lineWidth="1.0"/>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="linhas_alternadas" x="0" y="1" width="143" height="29" uuid="690bbea0-1826-48a7-a909-4a9204b3b728"/>
-				<box bottomPadding="0">
-					<pen lineWidth="1.0"/>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
+				<reportElement style="linhas_alternadas" x="0" y="0" width="40" height="29" uuid="75116a85-66a6-4b37-a35f-42b47ef2090e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="linhas_alternadas" x="292" y="1" width="263" height="29" uuid="ea2ea511-a8b7-4b93-96d5-6c62c67f368a"/>
-				<box bottomPadding="0">
-					<pen lineWidth="1.0"/>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
+				<reportElement style="linhas_alternadas" x="40" y="0" width="84" height="29" uuid="596e2512-08e7-4e7d-81a6-61c94b176974"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="linhas_alternadas" x="124" y="0" width="113" height="29" uuid="280c6893-0d45-476a-bb3b-df7a2a6f1d14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="linhas_alternadas" x="237" y="0" width="163" height="29" uuid="49c4db93-0476-4bea-8430-b49250f95605"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="linhas_alternadas" x="400" y="0" width="63" height="29" uuid="5b71cb0f-30b7-4387-a766-1a02c7272a7e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cep}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="linhas_alternadas" x="463" y="0" width="92" height="29" uuid="a1328898-f1e3-410e-9a84-b8cbea188e9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{celular}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

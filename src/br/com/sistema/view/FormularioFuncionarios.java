@@ -426,8 +426,8 @@ public class FormularioFuncionarios extends javax.swing.JDialog {
         txtEndereco = new javax.swing.JTextField();
         txtSenha = new javax.swing.JPasswordField();
         jLabel16 = new javax.swing.JLabel();
-        cdUF = new javax.swing.JComboBox<>();
-        cdNivel = new javax.swing.JComboBox<>();
+        cdUF = new javax.swing.JComboBox<String>();
+        cdNivel = new javax.swing.JComboBox<String>();
         jLabel17 = new javax.swing.JLabel();
         txtCargo = new javax.swing.JTextField();
         painel_consulta = new javax.swing.JPanel();
@@ -471,7 +471,7 @@ public class FormularioFuncionarios extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        painel_dados_pessoais.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        painel_dados_pessoais.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         jLabel2.setText("Código:");
 
@@ -605,9 +605,9 @@ public class FormularioFuncionarios extends javax.swing.JDialog {
 
         jLabel16.setText("Senha:");
 
-        cdUF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC  ", "AL  ", "AP  ", "AM  ", "BA  ", "CE  ", "DF  ", "ES  ", "GO  ", "MA  ", "MT  ", "MS  ", "MG  ", "PA  ", "PB  ", "PR  ", "PE  ", "PI  ", "RJ  ", "RN  ", "RS  ", "RO  ", "RR  ", "SC  ", "SP  ", "SE  ", "TO", "```" }));
+        cdUF.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AC  ", "AL  ", "AP  ", "AM  ", "BA  ", "CE  ", "DF  ", "ES  ", "GO  ", "MA  ", "MT  ", "MS  ", "MG  ", "PA  ", "PB  ", "PR  ", "PE  ", "PI  ", "RJ  ", "RN  ", "RS  ", "RO  ", "RR  ", "SC  ", "SP  ", "SE  ", "TO", "```" }));
 
-        cdNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ADMINISTRADOR", "USUARIO" }));
+        cdNivel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ADMINISTRADOR", "USUARIO" }));
 
         jLabel17.setText("Cargo:");
 
@@ -782,7 +782,7 @@ public class FormularioFuncionarios extends javax.swing.JDialog {
 
         painel_guias.addTab("Dados Pessoais", painel_dados_pessoais);
 
-        painel_consulta.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        painel_consulta.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         jLabel15.setText("Nome:");
 
@@ -893,6 +893,11 @@ public class FormularioFuncionarios extends javax.swing.JDialog {
         btnImprimir.setText("Imprimir");
         btnImprimir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnImprimir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnImprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1050,6 +1055,11 @@ public class FormularioFuncionarios extends javax.swing.JDialog {
     private void txtCargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCargoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCargoActionPerformed
+
+    private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
+        this.dispose();
+        new relatorios.relFuncionarios();
+    }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
      * @param args the command line arguments
