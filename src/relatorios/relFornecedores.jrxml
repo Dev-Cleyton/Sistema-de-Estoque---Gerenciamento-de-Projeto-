@@ -63,9 +63,16 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="35" splitType="Stretch">
+		<band height="36" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="555" height="35" uuid="f70e6ddb-0bd2-40ce-876d-1cd396a256f4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center">
 					<font size="24" isBold="true"/>
 				</textElement>
@@ -76,42 +83,84 @@
 	<columnHeader>
 		<band height="36" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="40" y="2" width="84" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="19e54b05-31b3-4fcb-9e81-b5d9b105d404"/>
+				<reportElement mode="Opaque" x="40" y="2" width="83" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="19e54b05-31b3-4fcb-9e81-b5d9b105d404"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[nome]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="124" y="2" width="113" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="fc4b08cc-4914-4dba-aecb-78aa9a61be37"/>
+				<reportElement mode="Opaque" x="124" y="2" width="101" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="fc4b08cc-4914-4dba-aecb-78aa9a61be37"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[cnpj]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="237" y="2" width="163" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="ddc12ed4-d122-4a5a-8fb9-b4d06be0a440"/>
+				<reportElement mode="Opaque" x="226" y="2" width="161" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="ddc12ed4-d122-4a5a-8fb9-b4d06be0a440"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[email]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="400" y="2" width="63" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="ce45152b-8559-45e3-b949-8742b7f22b31"/>
+				<reportElement mode="Opaque" x="388" y="2" width="62" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="ce45152b-8559-45e3-b949-8742b7f22b31"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[cep]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="463" y="2" width="92" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="c6baef8b-1de2-4e51-a9fb-532148423edb"/>
+				<reportElement mode="Opaque" x="451" y="2" width="104" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="c6baef8b-1de2-4e51-a9fb-532148423edb"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[celular]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="2" width="40" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="e9dc3aa0-1858-4c00-9065-a90370ef6d30"/>
+				<reportElement mode="Opaque" x="0" y="2" width="39" height="34" forecolor="#FFFFFF" backcolor="#030305" uuid="e9dc3aa0-1858-4c00-9065-a90370ef6d30"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
 				</textElement>
@@ -123,31 +172,73 @@
 		<band height="29" splitType="Stretch">
 			<textField>
 				<reportElement style="linhas_alternadas" x="0" y="0" width="40" height="29" uuid="75116a85-66a6-4b37-a35f-42b47ef2090e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="linhas_alternadas" x="40" y="0" width="84" height="29" uuid="596e2512-08e7-4e7d-81a6-61c94b176974"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="linhas_alternadas" x="124" y="0" width="113" height="29" uuid="280c6893-0d45-476a-bb3b-df7a2a6f1d14"/>
+				<reportElement style="linhas_alternadas" x="124" y="0" width="101" height="29" uuid="280c6893-0d45-476a-bb3b-df7a2a6f1d14"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="linhas_alternadas" x="237" y="0" width="163" height="29" uuid="49c4db93-0476-4bea-8430-b49250f95605"/>
+				<reportElement style="linhas_alternadas" x="225" y="0" width="163" height="29" uuid="49c4db93-0476-4bea-8430-b49250f95605"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="linhas_alternadas" x="400" y="0" width="63" height="29" uuid="5b71cb0f-30b7-4387-a766-1a02c7272a7e"/>
+				<reportElement style="linhas_alternadas" x="388" y="0" width="63" height="29" uuid="5b71cb0f-30b7-4387-a766-1a02c7272a7e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{cep}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="linhas_alternadas" x="463" y="0" width="92" height="29" uuid="a1328898-f1e3-410e-9a84-b8cbea188e9a"/>
+				<reportElement style="linhas_alternadas" x="451" y="0" width="104" height="29" uuid="a1328898-f1e3-410e-9a84-b8cbea188e9a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{celular}]]></textFieldExpression>
 			</textField>
