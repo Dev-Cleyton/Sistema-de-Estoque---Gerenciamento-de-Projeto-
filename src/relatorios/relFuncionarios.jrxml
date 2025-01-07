@@ -113,7 +113,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[cpf]]></text>
+				<text><![CDATA[CPF]]></text>
 			</staticText>
 		</band>
 	</columnHeader>

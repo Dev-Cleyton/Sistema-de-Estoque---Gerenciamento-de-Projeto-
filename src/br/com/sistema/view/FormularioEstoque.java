@@ -494,6 +494,11 @@ public class FormularioEstoque extends javax.swing.JDialog {
         btnImprimir.setText("Imprimir");
         btnImprimir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnImprimir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnImprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirActionPerformed(evt);
+            }
+        });
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Lista de Produtos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
@@ -645,6 +650,11 @@ public class FormularioEstoque extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null,"Erro" + e);            
         }
     }//GEN-LAST:event_btnAdicionarActionPerformed
+
+    private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
+        this.dispose();
+        new relatorios.relProdutos();
+    }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
      * @param args the command line arguments

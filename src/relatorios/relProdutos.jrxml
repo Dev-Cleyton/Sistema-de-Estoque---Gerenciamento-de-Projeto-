@@ -62,35 +62,35 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[id]]></text>
+				<text><![CDATA[Cod]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="48" y="0" width="110" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="7a704072-545c-4d2c-91fa-927c1b909cc3"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[descricao]]></text>
+				<text><![CDATA[Descrição]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="159" y="0" width="106" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="c570c296-bb5d-4a8f-844e-29a14ac72bd8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[preco]]></text>
+				<text><![CDATA[Preço]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="266" y="0" width="110" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="df45e7f3-05f7-4561-884f-36f4c7de10eb"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[qtd_estoque]]></text>
+				<text><![CDATA[QTD. Estoque]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="377" y="0" width="178" height="25" forecolor="#FFFFFF" backcolor="#030305" uuid="d97337e8-3a7a-4af6-af2c-778de49b8a2c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[nome]]></text>
+				<text><![CDATA[Nome]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
