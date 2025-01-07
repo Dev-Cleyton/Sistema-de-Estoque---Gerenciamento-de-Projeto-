@@ -368,7 +368,7 @@ public class FormularioProdutos extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        painel_dados_pessoais.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        painel_dados_pessoais.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         jLabel2.setText("Código:");
 
@@ -420,10 +420,10 @@ public class FormularioProdutos extends javax.swing.JDialog {
         });
 
         cdFornecedor.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 cdFornecedorAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -505,7 +505,7 @@ public class FormularioProdutos extends javax.swing.JDialog {
 
         painel_guias.addTab("Dados do Produto", painel_dados_pessoais);
 
-        painel_consulta.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        painel_consulta.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         jLabel15.setText("Descrição:");
 
@@ -611,6 +611,11 @@ public class FormularioProdutos extends javax.swing.JDialog {
         btnImprimir.setText("Imprimir");
         btnImprimir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnImprimir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnImprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -746,6 +751,11 @@ public class FormularioProdutos extends javax.swing.JDialog {
            cdFornecedor.addItem(f);
        }
     }//GEN-LAST:event_cdFornecedorMouseClicked
+
+    private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
+        this.dispose();
+        new relatorios.relProdutos();
+    }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
      * @param args the command line arguments
