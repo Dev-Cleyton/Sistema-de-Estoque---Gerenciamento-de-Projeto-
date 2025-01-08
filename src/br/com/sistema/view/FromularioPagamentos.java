@@ -240,6 +240,7 @@ public class FromularioPagamentos extends javax.swing.JDialog {
                 dispose();//Foi acrecentado depos no video 104
                 FormularioVendas fv = new FormularioVendas();//Foi acrecentado depos no video 104
                 fv.setVisible(true);//Foi acrecentado depos no video 104
+                new relatorios.relVendas();//Chama o relatorio de Vendas
             }
         } else {
             JOptionPane.showMessageDialog(null, "Não foi possível fazer a venda! O valor pago é menor que o valor ");
