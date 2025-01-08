@@ -142,6 +142,7 @@ public class FormularioLogin extends javax.swing.JFrame {
             senha = txtSenhaLogin.getText();
             FuncionariosDAO dao = new FuncionariosDAO();
             dao.efetuarLogin(email, senha);
+            this.dispose();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"ERRO" + e);
         }
