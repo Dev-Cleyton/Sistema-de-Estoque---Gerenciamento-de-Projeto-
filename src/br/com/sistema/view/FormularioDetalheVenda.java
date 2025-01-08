@@ -211,6 +211,7 @@ public class FormularioDetalheVenda extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
+       this.dispose();
        int id = Integer.valueOf(txtIdVenda.getText());
        new relatorios.rel2viacupom(id);
     }//GEN-LAST:event_btnImprimirActionPerformed
