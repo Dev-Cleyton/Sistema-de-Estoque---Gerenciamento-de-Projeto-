@@ -237,9 +237,9 @@ public class FromularioPagamentos extends javax.swing.JDialog {
                 pd.baixaEstoque(p.getId(), qtdatualizada);
                 ItensVendasDAO ivd = new ItensVendasDAO();
                 ivd.salvar(item);
-                dispose();//Foi acrecentado depos no video 104
+                this.dispose();//Foi acrecentado depos no video 104                                
                 FormularioVendas fv = new FormularioVendas();//Foi acrecentado depos no video 104
-                fv.setVisible(true);//Foi acrecentado depos no video 104
+                fv.setVisible(true);//Foi acrecentado depos no video 104 
                 new relatorios.relVendas();//Chama o relatorio de Vendas
             }
         } else {
