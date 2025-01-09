@@ -25,7 +25,7 @@ public class relProdutos {
         try {
             conexao.conecta();
             conexao.executeSQL("select p.id, p.descricao,p.preco,p.qtd_estoque,f.nome from tb_produtos as p inner join tb_fornecedores as f on(p.for_id=f.id)");
-            String caminhoRelatorioCliente ="C:\\Users\\cleyton\\Documents\\NetBeansProjects\\sistema Estoque\\src\\relatorios\\relProdutos.jasper" ;
+            String caminhoRelatorioCliente ="C:\\sistema Estoque\\src\\relatorios\\relProdutos.jasper" ;
             JRResultSetDataSource jrRs = new JRResultSetDataSource(conexao.resultSet);
             JasperPrint jasperPrint = JasperFillManager.fillReport(caminhoRelatorioCliente,new HashMap(),jrRs);
             JasperViewer.viewReport(jasperPrint,false);                        

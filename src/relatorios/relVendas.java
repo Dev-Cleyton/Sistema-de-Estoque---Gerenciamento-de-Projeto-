@@ -25,7 +25,7 @@ public class relVendas {
         try {
             conexao.conecta();
             conexao.executeSQL("select i.venda_id,p.descricao,p.preco,i.qtd,i.subtotal from tb_itensvendas as i inner join tb_produtos as p on(i.produto_id=p.id) where venda_id =(select max(id) from tb_vendas)");
-            String caminhoRelatorioCliente ="C:\\Users\\cleyton\\Documents\\NetBeansProjects\\sistema Estoque\\src\\relatorios\\relVendas.jasper" ;
+            String caminhoRelatorioCliente ="C:\\sistema Estoque\\src\\relatorios\\relVendas.jasper" ;
             JRResultSetDataSource jrRs = new JRResultSetDataSource(conexao.resultSet);
             JasperPrint jasperPrint = JasperFillManager.fillReport(caminhoRelatorioCliente,new HashMap(),jrRs);
             JasperViewer.viewReport(jasperPrint,false);                        

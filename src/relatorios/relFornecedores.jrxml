@@ -58,7 +58,7 @@
 		<band height="79" splitType="Stretch">
 			<image>
 				<reportElement x="0" y="0" width="555" height="79" uuid="5f8220f6-c7dc-42f9-8b24-c18d8a561a1e"/>
-				<imageExpression><![CDATA["C:\\Users\\cleyton\\Documents\\NetBeansProjects\\sistema Estoque\\src\\imgFundo\\slogaRelatorio.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:\\sistema Estoque\\src\\imgFundo\\slogaRelatorio.png"]]></imageExpression>
 			</image>
 		</band>
 	</title>

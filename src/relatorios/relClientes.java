@@ -25,7 +25,7 @@ public class relClientes {
         try {
             conexao.conecta();
             conexao.executeSQL("select * from tb_clientes");
-            String caminhoRelatorioCliente ="C:\\Users\\cleyton\\Documents\\NetBeansProjects\\sistema Estoque\\src\\relatorios\\relClientes.jasper" ;
+            String caminhoRelatorioCliente ="C:\\sistema Estoque\\src\\relatorios\\relClientes.jasper" ;
             JRResultSetDataSource jrRs = new JRResultSetDataSource(conexao.resultSet);
             JasperPrint jasperPrint = JasperFillManager.fillReport(caminhoRelatorioCliente,new HashMap(),jrRs);
             JasperViewer.viewReport(jasperPrint,false);                        

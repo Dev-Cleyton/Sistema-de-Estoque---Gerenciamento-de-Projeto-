@@ -25,8 +25,8 @@ private Connection con;
 
 public rel2viacupom(int id){
     this.con =new ConexaoBanco().pegarConexao();
-    try {
-        String jasper = "C:\\Users\\cleyton\\Documents\\NetBeansProjects\\sistema Estoque\\src\\relatorios\\rel2viaCupom.jasper";
+    try {                
+        String jasper = "C:\\sistema Estoque\\src\\relatorios\\rel2viaCupom.jasper";
         Map<String,Object> param = new HashMap<>();
         param.put("id",id);
         JasperPrint japerPrint = JasperFillManager.fillReport(jasper,param,con);
