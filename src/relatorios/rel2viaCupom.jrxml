@@ -45,7 +45,7 @@ WHERE
 		<band height="80" splitType="Stretch">
 			<image>
 				<reportElement x="0" y="0" width="555" height="79" uuid="00f86ede-cb43-4486-9e43-fd199091b81e"/>
-				<imageExpression><![CDATA["C:\\Users\\cleyton\\Documents\\NetBeansProjects\\sistema Estoque\\src\\imgFundo\\slogaRelatorio.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:\\sistema Estoque\\src\\imgFundo\\slogaRelatorio.png"]]></imageExpression>
 			</image>
 		</band>
 	</title>
