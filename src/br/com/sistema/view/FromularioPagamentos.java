@@ -219,7 +219,7 @@ public class FromularioPagamentos extends javax.swing.JDialog {
             vd.SalvarVendasDAO(v);
 
             v.setId(vd.retonaUltimoIdVenda());
-           // JOptionPane.showMessageDialog(null, "ID da ultima venda!" + v.getId());
+            // JOptionPane.showMessageDialog(null, "ID da ultima venda!" + v.getId());
 
             for (int i = 0; i < meus_produtos.getRowCount(); i++) {
                 int qtd_estoque, qtd_comprada, qtdatualizada;
@@ -237,13 +237,17 @@ public class FromularioPagamentos extends javax.swing.JDialog {
                 pd.baixaEstoque(p.getId(), qtdatualizada);
                 ItensVendasDAO ivd = new ItensVendasDAO();
                 ivd.salvar(item);
-                this.dispose();//Foi acrecentado depos no video 104                                
-                FormularioVendas fv = new FormularioVendas();//Foi acrecentado depos no video 104
-                fv.setVisible(true);//Foi acrecentado depos no video 104 
-                new relatorios.relVendas();//Chama o relatorio de Vendas
             }
+
+        this.dispose(); // Foi acrescentado depois no vídeo 104
+        FormularioVendas fv = new FormularioVendas(); // Foi acrescentado depois no vídeo 104
+        fv.setVisible(true); // Foi acrescentado depois no vídeo 104 
+
+        // Chama o relatório de vendas fora do loop
+        new relatorios.relVendas();
+
         } else {
-            JOptionPane.showMessageDialog(null, "Não foi possível fazer a venda! O valor pago é menor que o valor ");
+            JOptionPane.showMessageDialog(null, "Não foi possível fazer a venda! O valor pago é menor que o valor.");
         }
     }//GEN-LAST:event_btnPagarActionPerformed
 
@@ -277,7 +281,7 @@ public class FromularioPagamentos extends javax.swing.JDialog {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FromularioPagamentos().setVisible(true);
+               new FromularioPagamentos().setVisible(true);
             }
         });
     }
