@@ -25,7 +25,7 @@ public class ConexaoBanco {
 
     // URL de conexão com o banco de dados. 
     // No exemplo, a URL aponta para o banco "sistemaestoque" no servidor local
-    final private String url = "jdbc:mysql://192.168.0.103/sistemaestoque";
+    final private String url = "jdbc:mysql://192.168.0.106/sistemaestoque";
 
     // Nome de usuário para autenticação no banco de dados. 
     // No exemplo, o usuário é "root", que é o padrão do MySQL
