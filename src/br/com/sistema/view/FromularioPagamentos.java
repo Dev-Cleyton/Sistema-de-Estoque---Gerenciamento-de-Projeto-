@@ -244,7 +244,7 @@ public class FromularioPagamentos extends javax.swing.JDialog {
         fv.setVisible(true); // Foi acrescentado depois no vídeo 104 
 
         // Chama o relatório de vendas fora do loop
-        new relatorios.relVendas();
+        new relatorios.RelVendas();
 
         } else {
             JOptionPane.showMessageDialog(null, "Não foi possível fazer a venda! O valor pago é menor que o valor.");

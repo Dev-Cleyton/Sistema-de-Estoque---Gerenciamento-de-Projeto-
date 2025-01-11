@@ -1058,7 +1058,7 @@ public class FormularioFuncionarios extends javax.swing.JDialog {
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         this.dispose();
-        new relatorios.relFuncionarios();
+        new relatorios.RelFuncionarios();
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**

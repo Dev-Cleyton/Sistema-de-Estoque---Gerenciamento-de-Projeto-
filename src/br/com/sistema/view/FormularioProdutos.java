@@ -754,7 +754,7 @@ public class FormularioProdutos extends javax.swing.JDialog {
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         this.dispose();
-        new relatorios.relProdutos();
+        new relatorios.RelProdutos();
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**

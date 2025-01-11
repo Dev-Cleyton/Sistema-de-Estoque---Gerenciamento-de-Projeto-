@@ -18,7 +18,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import javax.swing.JOptionPane;
-import relatorios.relHistoricoVendas;
+import relatorios.RelHistoricoVendas;
 
 /**
  *
@@ -260,7 +260,7 @@ public class FormularioHistorico extends javax.swing.JFrame {
         Date dataFim = java.sql.Date.valueOf(data_fim);
 
         // Gerando o relatório
-        relHistoricoVendas relatorio = new relHistoricoVendas();
+        RelHistoricoVendas relatorio = new RelHistoricoVendas();
         relatorio.gerarRelatorio(dataInicio, dataFim);
     } catch (Exception e) {
         e.printStackTrace();

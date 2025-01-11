@@ -971,7 +971,7 @@ public void Excluir() {
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
        this.dispose();
-       new relatorios.relClientes();
+       new relatorios.RelClientes();
        
     }//GEN-LAST:event_btnImprimirActionPerformed
 

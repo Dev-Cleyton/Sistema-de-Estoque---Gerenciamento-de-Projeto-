@@ -953,7 +953,7 @@ public class FormularioFornecedores extends javax.swing.JDialog {
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
        this.dispose();
-       new relatorios.relFornecedores();
+       new relatorios.RelFornecedores();
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
