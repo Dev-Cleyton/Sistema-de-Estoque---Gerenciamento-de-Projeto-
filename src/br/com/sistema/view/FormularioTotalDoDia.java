@@ -7,7 +7,6 @@ import br.com.sistema.dao.VendasDAO;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 import javax.swing.JOptionPane;
-import relatorios.RelHistoricoVendas;
 
 /**
  *
