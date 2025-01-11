@@ -25,7 +25,7 @@ private Connection con;
 
 public Rel2viacupom(int id){
     this.con =new ConexaoBanco().pegarConexao();
-    try {                
+    try {
         String jasper = "C:\\sistema Estoque\\src\\relatorios\\rel2viaCupom.jasper";
         Map<String,Object> param = new HashMap<>();
         param.put("id",id);
@@ -38,12 +38,4 @@ public Rel2viacupom(int id){
     }
         
 }
-       
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
 }

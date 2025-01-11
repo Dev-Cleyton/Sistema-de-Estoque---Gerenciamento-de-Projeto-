@@ -32,13 +32,5 @@ public class RelProdutos {
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(null, "Erro no meu ireport" + erro.getMessage());
         }
-    }
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-    }
-    
+    }  
 }

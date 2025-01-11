@@ -28,17 +28,9 @@ public class RelClientes {
             String caminhoRelatorioCliente ="C:\\sistema Estoque\\src\\relatorios\\relClientes.jasper" ;
             JRResultSetDataSource jrRs = new JRResultSetDataSource(conexao.resultSet);
             JasperPrint jasperPrint = JasperFillManager.fillReport(caminhoRelatorioCliente,new HashMap(),jrRs);
-            JasperViewer.viewReport(jasperPrint,false);                        
+            JasperViewer.viewReport(jasperPrint,false);                       
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(null, "Erro no meu ireport" + erro.getMessage());
         }
-    }
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-    }
-    
+    }    
 }
