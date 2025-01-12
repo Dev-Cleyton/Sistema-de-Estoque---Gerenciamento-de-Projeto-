@@ -20,7 +20,9 @@ public class ConexaoBancoRelatorios {
     final private String driver = "com.mysql.jdbc.Driver";
     // URL de conexão com o banco de dados. 
     // No exemplo, a URL aponta para o banco "sistemaestoque" no servidor local
-    final private String url = "jdbc:mysql://192.168.0.106/sistemaestoque";
+    private String ip = "192.168.0.106";
+    
+    final private String url = "jdbc:mysql://"+ip+"/sistemaestoque";
 
     // Nome de usuário para autenticação no banco de dados. 
     // No exemplo, o usuário é "root", que é o padrão do MySQL
