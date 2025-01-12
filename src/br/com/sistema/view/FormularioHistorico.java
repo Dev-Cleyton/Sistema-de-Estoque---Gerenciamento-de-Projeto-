@@ -18,6 +18,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import relatorios.RelHistoricoVendas;
 
 /**
  *
@@ -259,8 +260,8 @@ public class FormularioHistorico extends javax.swing.JFrame {
         Date dataFim = java.sql.Date.valueOf(data_fim);
 
         // Gerando o relatório
-        /*RelHistoricoVendas relatorio = new RelHistoricoVendas();
-        relatorio.gerarRelatorio(dataInicio, dataFim);*/
+        RelHistoricoVendas relatorio = new RelHistoricoVendas();
+        relatorio.gerarRelatorio(dataInicio, dataFim);
     } catch (Exception e) {
         e.printStackTrace();
         JOptionPane.showMessageDialog(null, "Erro ao gerar o relatório: " + e.getMessage());
