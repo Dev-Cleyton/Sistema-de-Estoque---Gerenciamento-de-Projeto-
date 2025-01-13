@@ -180,7 +180,7 @@
                               <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="txtCodigo" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCodigo" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -188,7 +188,7 @@
                               <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="btnPesquisa" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPesquisa" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="txtDescricao" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -200,8 +200,8 @@
                                       <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="btnAdicionar" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtQtdNova" alignment="1" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="btnAdicionar" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="txtQtdNova" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>

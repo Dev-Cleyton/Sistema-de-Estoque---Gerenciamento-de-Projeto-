@@ -83,8 +83,10 @@ public class FormularioHistorico extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Consulta por Data"));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-data-de-pagamento-20.png"))); // NOI18N
         jLabel2.setText("Data inicial:");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-data-de-pagamento-20.png"))); // NOI18N
         jLabel3.setText("Data Final:");
 
         try {
@@ -122,7 +124,7 @@ public class FormularioHistorico extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)

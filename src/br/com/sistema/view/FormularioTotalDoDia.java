@@ -67,6 +67,7 @@ public class FormularioTotalDoDia extends javax.swing.JDialog {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Posição do Dia"));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-data-de-pagamento-20.png"))); // NOI18N
         jLabel2.setText("Data :");
 
         try {

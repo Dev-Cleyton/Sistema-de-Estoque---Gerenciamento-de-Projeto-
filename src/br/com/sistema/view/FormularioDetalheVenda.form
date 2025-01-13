@@ -139,8 +139,8 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtIdVenda" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtTotalVenda" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtIdVenda" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="txtTotalVenda" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -151,12 +151,12 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtCliente" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtDataVenda" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtDataVenda" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="btnImprimir" min="-2" max="-2" attributes="0"/>
