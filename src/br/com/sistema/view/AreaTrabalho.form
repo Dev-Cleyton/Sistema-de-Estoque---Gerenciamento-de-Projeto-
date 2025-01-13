@@ -6,7 +6,12 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imgFundo/icon/icons8-user-group-skin-type-7-38.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Clientes"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="AreaTrabalho_jMenu1"/>
@@ -16,6 +21,9 @@
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+C"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imgFundo/icon/icons8-convidado-masculino-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Formulario de Clientes"/>
               </Properties>
@@ -27,13 +35,21 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imgFundo/icon/icons8-management-38.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Funcion&#xe1;rios"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="menu_funcionario">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+F"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imgFundo/icon/icons8-administrador-masculino-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Formulario de Funcion&#xe1;rios"/>
               </Properties>
@@ -48,7 +64,12 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="menu_fornecedores">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imgFundo/icon/icons8-supplier-38.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Fornecedores"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -58,6 +79,9 @@
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+G"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imgFundo/icon/icons8-assistente-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Formulario de Fornecedores"/>
               </Properties>
@@ -69,11 +93,19 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu4">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imgFundo/icon/icons8-add-shopping-cart-38.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Produtos"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <SubComponents>
             <Menu class="javax.swing.JMenu" name="jMenu18">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imgFundo/icon/icons8-mover-por-carrinho-20.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Meus Produtos"/>
               </Properties>
               <SubComponents>
@@ -81,6 +113,9 @@
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+N"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imgFundo/icon/icons8-macbook-de-desempenho-20.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Controle de Estoque"/>
                   </Properties>
@@ -96,6 +131,9 @@
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+M"/>
                     </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imgFundo/icon/icons8-m&#xe9;tricas-de-laptop-20.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Consulta de produtos"/>
                   </Properties>
                   <Events>
@@ -106,6 +144,9 @@
                   <Properties>
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="Ctrl+P"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imgFundo/icon/icons8-teste-passado-20.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Formulari de Produtos"/>
                   </Properties>
@@ -120,11 +161,19 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu5">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imgFundo/icon/icons8-sales-38.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Vendas"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imgFundo/icon/icons8-or&#xe7;amento-20.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Abrir PDV"/>
               </Properties>
               <Events>
@@ -133,6 +182,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imgFundo/icon/icons8-data-de-pagamento-20.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Posi&#xe7;&#xe3;o do Dia "/>
               </Properties>
               <Events>
@@ -141,6 +193,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imgFundo/icon/icons8-tarefas-financeiras-20.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="historico de Vendas"/>
               </Properties>
               <Events>
@@ -151,11 +206,19 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu6">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imgFundo/icon/icons8-settings-38.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Configura&#xe7;&#xf5;es"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imgFundo/icon/icons8-entrar-na-senha-do-formul&#xe1;rio-20.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Troca de Usu&#xe1;rio"/>
               </Properties>
               <Events>
@@ -166,11 +229,19 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu7">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imgFundo/icon/icons8-imac-exit-38.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="sair"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem8">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/imgFundo/icon/icons8-cancelar-20.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sair Do Sistema"/>
               </Properties>
               <Events>
@@ -238,7 +309,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="303" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="284" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>

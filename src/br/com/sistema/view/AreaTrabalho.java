@@ -81,7 +81,7 @@ public class AreaTrabalho extends javax.swing.JFrame {
         );
         PanelDesktopLayout.setVerticalGroup(
             PanelDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 303, Short.MAX_VALUE)
+            .addGap(0, 284, Short.MAX_VALUE)
         );
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
@@ -114,9 +114,13 @@ public class AreaTrabalho extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-user-group-skin-type-7-38.png"))); // NOI18N
         jMenu1.setText("Clientes");
+        jMenu1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jMenu1.setIconTextGap(10);
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-convidado-masculino-20.png"))); // NOI18N
         jMenuItem2.setText("Formulario de Clientes");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,9 +131,13 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-management-38.png"))); // NOI18N
         jMenu2.setText("Funcionários");
+        jMenu2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jMenu2.setIconTextGap(10);
 
-        menu_funcionario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        menu_funcionario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        menu_funcionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-administrador-masculino-20.png"))); // NOI18N
         menu_funcionario.setText("Formulario de Funcionários");
         menu_funcionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,9 +148,13 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        menu_fornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-supplier-38.png"))); // NOI18N
         menu_fornecedores.setText("Fornecedores");
+        menu_fornecedores.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        menu_fornecedores.setIconTextGap(10);
 
-        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-assistente-20.png"))); // NOI18N
         jMenuItem4.setText("Formulario de Fornecedores");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,11 +165,16 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(menu_fornecedores);
 
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-add-shopping-cart-38.png"))); // NOI18N
         jMenu4.setText("Produtos");
+        jMenu4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jMenu4.setIconTextGap(10);
 
+        jMenu18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-mover-por-carrinho-20.png"))); // NOI18N
         jMenu18.setText("Meus Produtos");
 
-        menu_estoque.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        menu_estoque.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        menu_estoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-macbook-de-desempenho-20.png"))); // NOI18N
         menu_estoque.setText("Controle de Estoque");
         menu_estoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,7 +183,8 @@ public class AreaTrabalho extends javax.swing.JFrame {
         });
         jMenu18.add(menu_estoque);
 
-        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-métricas-de-laptop-20.png"))); // NOI18N
         jMenuItem5.setText("Consulta de produtos");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,7 +193,8 @@ public class AreaTrabalho extends javax.swing.JFrame {
         });
         jMenu18.add(jMenuItem5);
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-teste-passado-20.png"))); // NOI18N
         jMenuItem1.setText("Formulari de Produtos");
         jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -193,8 +212,12 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-sales-38.png"))); // NOI18N
         jMenu5.setText("Vendas");
+        jMenu5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jMenu5.setIconTextGap(10);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-orçamento-20.png"))); // NOI18N
         jMenuItem3.setText("Abrir PDV");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,6 +226,7 @@ public class AreaTrabalho extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem3);
 
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-data-de-pagamento-20.png"))); // NOI18N
         jMenuItem6.setText("Posição do Dia ");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,6 +235,7 @@ public class AreaTrabalho extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem6);
 
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-tarefas-financeiras-20.png"))); // NOI18N
         jMenuItem9.setText("historico de Vendas");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,8 +246,12 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-settings-38.png"))); // NOI18N
         jMenu6.setText("Configurações");
+        jMenu6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jMenu6.setIconTextGap(10);
 
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-entrar-na-senha-do-formulário-20.png"))); // NOI18N
         jMenuItem7.setText("Troca de Usuário");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,8 +262,12 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-imac-exit-38.png"))); // NOI18N
         jMenu7.setText("sair");
+        jMenu7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jMenu7.setIconTextGap(10);
 
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/icon/icons8-cancelar-20.png"))); // NOI18N
         jMenuItem8.setText("Sair Do Sistema");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
