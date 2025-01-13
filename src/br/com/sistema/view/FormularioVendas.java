@@ -253,6 +253,7 @@ public class FormularioVendas extends javax.swing.JFrame {
             }
         });
 
+        btnPesquisarNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-search-client-20.png"))); // NOI18N
         btnPesquisarNome.setText("Pesquisar");
         btnPesquisarNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -287,14 +288,14 @@ public class FormularioVendas extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jScrollPane1)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnPesquisarNome, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnPesquisarNome))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
                         .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -331,7 +332,7 @@ public class FormularioVendas extends javax.swing.JFrame {
                         .addComponent(jLabel5))
                     .addComponent(txtPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
         );
 
         Painel_Produto.setBorder(javax.swing.BorderFactory.createTitledBorder("Produto"));
@@ -365,9 +366,11 @@ public class FormularioVendas extends javax.swing.JFrame {
 
         txtQtd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtQtd.setText("01");
-        txtQtd.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtQtd.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        btnAdicionarItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-adicionar-o-carrinho-de-compras-30.png"))); // NOI18N
         btnAdicionarItem.setText("Adicionar Item");
+        btnAdicionarItem.setIconTextGap(10);
         btnAdicionarItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicionarItemActionPerformed(evt);
@@ -377,6 +380,7 @@ public class FormularioVendas extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel11.setText("Desconto em % :");
 
+        btnPequisarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-search-more-16.png"))); // NOI18N
         btnPequisarProduto.setText("Pesquisar");
         btnPequisarProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -387,7 +391,9 @@ public class FormularioVendas extends javax.swing.JFrame {
         txtDesconto.setEditable(false);
         txtDesconto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
+        btnLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-esvaziar-o-carrinho-de-compras-30.png"))); // NOI18N
         btnLimpar.setText("Limpar ");
+        btnLimpar.setIconTextGap(10);
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimparActionPerformed(evt);
@@ -515,6 +521,7 @@ public class FormularioVendas extends javax.swing.JFrame {
         txtTotalVenda.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         btnPagamento.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPagamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-cartões-de-banco-30.png"))); // NOI18N
         btnPagamento.setText("Pagamento");
         btnPagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -523,6 +530,7 @@ public class FormularioVendas extends javax.swing.JFrame {
         });
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-sem-cartões-de-crédito-30.png"))); // NOI18N
         btnCancelar.setText("Cancelar Venda");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);

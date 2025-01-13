@@ -87,13 +87,21 @@ public class FromularioPagamentos extends javax.swing.JDialog {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-dinheiro-20.png"))); // NOI18N
         jLabel2.setText("Dinheiro:");
+        jLabel2.setIconTextGap(10);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-frente-do-cartão-de-crédito-20.png"))); // NOI18N
         jLabel3.setText("Cartão:");
+        jLabel3.setIconTextGap(17);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-salário-20.png"))); // NOI18N
         jLabel4.setText("Cheque:");
+        jLabel4.setIconTextGap(14);
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-dinheiro-20 (1).png"))); // NOI18N
         jLabel5.setText("Troco:");
+        jLabel5.setIconTextGap(20);
 
         jLabel6.setText("Total:");
 
@@ -119,6 +127,7 @@ public class FromularioPagamentos extends javax.swing.JDialog {
         jScrollPane1.setViewportView(txtObservacoes);
 
         btnPagar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnPagar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-orçamento-38.png"))); // NOI18N
         btnPagar.setText("Pagar");
         btnPagar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +156,7 @@ public class FromularioPagamentos extends javax.swing.JDialog {
                             .addComponent(txtCheque, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCartao, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDinheiro, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
