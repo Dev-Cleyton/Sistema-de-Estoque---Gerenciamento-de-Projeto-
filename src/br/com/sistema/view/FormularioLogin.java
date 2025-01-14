@@ -5,6 +5,7 @@
 package br.com.sistema.view;
 
 import br.com.sistema.dao.FuncionariosDAO;
+import br.com.sistema.ultilitarios.Ultilitarios;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,7 +18,9 @@ public class FormularioLogin extends javax.swing.JFrame {
      * Creates new form FormularioLogin
      */
     public FormularioLogin() {
-        initComponents();
+        Ultilitarios u = new Ultilitarios();
+        u.InserirIcone(this);
+        initComponents();        
     }
 
     /**

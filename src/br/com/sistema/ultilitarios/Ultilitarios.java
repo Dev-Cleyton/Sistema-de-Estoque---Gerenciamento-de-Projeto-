@@ -5,6 +5,8 @@
 package br.com.sistema.ultilitarios;
 
 import java.awt.Component;
+import java.awt.Toolkit;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -56,5 +58,11 @@ public class Ultilitarios {
             }
         }
     }
-
+    public void InserirIcone(JFrame frm){
+        try {
+            frm.setIconImage(Toolkit.getDefaultToolkit().getImage("src/br/com/sistema/imagens/sloga.png"));
+        } catch (Exception e) {
+            System.out.println("caminho nao encontrado" + e.getMessage());
+        }
+    }
 }

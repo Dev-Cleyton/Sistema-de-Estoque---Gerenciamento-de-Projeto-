@@ -4,10 +4,12 @@
  */
 package br.com.sistema.view;
 
+import br.com.sistema.ultilitarios.Ultilitarios;
 import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -20,6 +22,8 @@ public class AreaTrabalho extends javax.swing.JFrame {
      */
     public String usuarioLogado;
     public AreaTrabalho() {
+        Ultilitarios u = new Ultilitarios();
+        u.InserirIcone(this);
         initComponents();
     }
 
