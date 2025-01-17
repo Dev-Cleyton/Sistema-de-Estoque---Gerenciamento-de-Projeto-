@@ -771,7 +771,7 @@ public class FormularioProdutos extends javax.swing.JDialog {
     }//GEN-LAST:event_cdFornecedorMouseClicked
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
-    jProgressBar1.setIndeterminate(true); // Ativa o modo indeterminado 
+    jProgressBar2.setIndeterminate(true); // Ativa o modo indeterminado 
     new Thread(() -> {
     try { 
         new relatorios.RelProdutos();
@@ -781,7 +781,7 @@ public class FormularioProdutos extends javax.swing.JDialog {
                 e.printStackTrace();
             } finally {
                 // Finaliza a barra de progresso
-                SwingUtilities.invokeLater(() -> jProgressBar1.setIndeterminate(false));
+                SwingUtilities.invokeLater(() -> jProgressBar2.setIndeterminate(false));
                 this.dispose(); // Fecha a janela atual
             }
         }).start(); 

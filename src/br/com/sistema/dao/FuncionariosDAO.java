@@ -434,51 +434,56 @@ public class FuncionariosDAO {
      * @see AreaTrabalho
      * @see FormularioLogin
      */
-    public void efetuarLogin(String email, String senha) {
-        try {
-            // 1º Cria o comando SQL para verificar email e senha no banco de dados
-            String sql = "SELECT * FROM tb_funcionarios WHERE email=? and senha=?";
+ public boolean efetuarLogin(String email, String senha) {
+    try {
+        // 1º Cria o comando SQL para verificar email e senha no banco de dados
+        String sql = "SELECT * FROM tb_funcionarios WHERE email = ? AND senha = ?";
 
-            // 2º Prepara a declaração SQL e define os parâmetros (email e senha)
-            PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, email);
-            stmt.setString(2, senha);
+        // 2º Prepara a declaração SQL e define os parâmetros (email e senha)
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, email);
+        stmt.setString(2, senha);
 
-            // 3º Executa a consulta e verifica se o funcionário existe
-            ResultSet rs = stmt.executeQuery();
+        // 3º Executa a consulta e verifica se o funcionário existe
+        ResultSet rs = stmt.executeQuery();
 
-            if (rs.next()) { // Se o funcionário for encontrado
-                // Verifica o nível de acesso
-                String nivelAcesso = rs.getString("nivel_acesso");
+        if (rs.next()) {
+            // Se o funcionário for encontrado, verifica o nível de acesso
+            String nivelAcesso = rs.getString("nivel_acesso");
+            String nomeUsuario = rs.getString("nome");
 
-                AreaTrabalho at = new AreaTrabalho();
-                at.usuarioLogado = rs.getString("nome");
+            AreaTrabalho at = new AreaTrabalho();
+            at.usuarioLogado = nomeUsuario;
 
-                if (nivelAcesso.equals("ADMINISTRADOR")) {
-                    // 4º Exibe uma mensagem de boas-vindas e abre a área de trabalho de administrador
-                    JOptionPane.showMessageDialog(null, "Seja Bem-Vindo ao Sistema, Administrador!\n" + at.usuarioLogado);
-                    at.setVisible(true);
+            if (nivelAcesso.equalsIgnoreCase("ADMINISTRADOR")) {
+                JOptionPane.showMessageDialog(null, 
+                    "Seja Bem-Vindo ao Sistema, Administrador!\n" + nomeUsuario);
+                at.setVisible(true);
 
-                } else if (nivelAcesso.equals("USUARIO")) {
-                    // Configura as permissões para usuário comum
-                    at.menu_fornecedores.setVisible(false);
-                    at.menu_funcionario.setEnabled(false);
-                    at.menu_estoque.setEnabled(false);
+            } else if (nivelAcesso.equalsIgnoreCase("USUARIO")) {
+                // Configura as permissões para usuário comum
+                at.menu_fornecedores.setVisible(false);
+                at.menu_funcionario.setEnabled(false);
+                at.menu_estoque.setEnabled(false);
 
-                    // Exibe uma mensagem de boas-vindas para o usuário comum
-                    JOptionPane.showMessageDialog(null, "Seja Bem-Vindo ao Sistema, Usuário!\n" + at.usuarioLogado);
-                    at.setVisible(true);
-                }
-            } else {
-                // 5º Exibe uma mensagem de erro e retorna para a tela de login
-                JOptionPane.showMessageDialog(null, "Dados Inválidos!");
-                FormularioLogin login = new FormularioLogin();
-                login.setVisible(true);
+                JOptionPane.showMessageDialog(null, 
+                    "Seja Bem-Vindo ao Sistema, Usuário!\n" + nomeUsuario);
+                at.setVisible(true);
             }
 
-        } catch (SQLException erroLogin) {
-            // 6º Tratamento de erro em caso de falha na execução da consulta SQL
-            JOptionPane.showMessageDialog(null, "Erro ao efetuar login: " + erroLogin.getMessage());
+            return true; // Login bem-sucedido
+        } else {
+            // 4º Exibe uma mensagem de erro em caso de login inválido
+            JOptionPane.showMessageDialog(null, 
+                "Dados Inválidos! Verifique seu e-mail e senha.");
+            return false; // Login falhou
         }
+
+    } catch (SQLException erroLogin) {
+        // 5º Tratamento de erro em caso de falha na execução da consulta SQL
+        JOptionPane.showMessageDialog(null, 
+            "Erro ao efetuar login: " + erroLogin.getMessage());
+        return false; // Login falhou devido a erro
     }
+}
 }
