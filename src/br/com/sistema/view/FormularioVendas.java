@@ -532,6 +532,11 @@ public class FormularioVendas extends javax.swing.JFrame {
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgFundo/IconButton/icons8-sem-cartões-de-crédito-30.png"))); // NOI18N
         btnCancelar.setText("Cancelar Venda");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -712,6 +717,10 @@ public class FormularioVendas extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Verifique se você nao esqueceu de \npreencher alguma informação importante!\nOs campos podem ser NOME e/ou CPF");
         }
     }//GEN-LAST:event_btnPagamentoActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
