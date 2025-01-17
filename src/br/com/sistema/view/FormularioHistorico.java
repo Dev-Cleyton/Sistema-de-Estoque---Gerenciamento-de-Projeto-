@@ -18,6 +18,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import relatorios.RelHistoricoVendas;
 
 /**
@@ -256,24 +257,36 @@ public class FormularioHistorico extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        try {
-        // Configuração do formato
-        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            // Configuração do formato
+            DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        // Capturando as datas no formato LocalDate
-        LocalDate data_inicio = LocalDate.parse(txtInicio.getText(), formato);
-        LocalDate data_fim = LocalDate.parse(txtFim.getText(), formato);
+            // Capturando as datas no formato LocalDate
+            LocalDate data_inicio = LocalDate.parse(txtInicio.getText(), formato);
+            LocalDate data_fim = LocalDate.parse(txtFim.getText(), formato);
 
-        // Convertendo LocalDate para java.util.Date
-        Date dataInicio = java.sql.Date.valueOf(data_inicio);
-        Date dataFim = java.sql.Date.valueOf(data_fim);
-
-        // Gerando o relatório
-        RelHistoricoVendas relatorio = new RelHistoricoVendas();
-        relatorio.gerarRelatorio(dataInicio, dataFim);
-    } catch (Exception e) {
-        e.printStackTrace();
-        JOptionPane.showMessageDialog(null, "Erro ao gerar o relatório: " + e.getMessage());
-    }
+            // Convertendo LocalDate para java.util.Date
+            Date dataInicio = java.sql.Date.valueOf(data_inicio);
+            Date dataFim = java.sql.Date.valueOf(data_fim);
+            jProgressBar1.setIndeterminate(true); // Ativa o modo indeterminado 
+            new Thread(() -> {
+            try {    
+                // Gerando o relatório
+                RelHistoricoVendas relatorio = new RelHistoricoVendas();
+                relatorio.gerarRelatorio(dataInicio, dataFim);
+                Thread.sleep(1000); 
+                } catch (InterruptedException e) {
+                // Loga a interrupção da thread, caso aconteça
+                    e.printStackTrace();
+                } finally {
+                    // Finaliza a barra de progresso
+                    SwingUtilities.invokeLater(() -> jProgressBar1.setIndeterminate(false));
+                    this.dispose(); // Fecha a janela atual
+                }
+            }).start();    
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Erro ao gerar o relatório: " + e.getMessage());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

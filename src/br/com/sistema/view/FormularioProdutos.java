@@ -15,6 +15,7 @@ import java.awt.event.KeyEvent;
 import java.awt.geom.Arc2D;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -770,8 +771,20 @@ public class FormularioProdutos extends javax.swing.JDialog {
     }//GEN-LAST:event_cdFornecedorMouseClicked
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
-        this.dispose();
+    jProgressBar1.setIndeterminate(true); // Ativa o modo indeterminado 
+    new Thread(() -> {
+    try { 
         new relatorios.RelProdutos();
+        Thread.sleep(1000); 
+            } catch (InterruptedException e) {
+            // Loga a interrupção da thread, caso aconteça
+                e.printStackTrace();
+            } finally {
+                // Finaliza a barra de progresso
+                SwingUtilities.invokeLater(() -> jProgressBar1.setIndeterminate(false));
+                this.dispose(); // Fecha a janela atual
+            }
+        }).start(); 
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**

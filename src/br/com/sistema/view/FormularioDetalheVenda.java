@@ -4,6 +4,8 @@
  */
 package br.com.sistema.view;
 
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author cleyton
@@ -212,9 +214,21 @@ public class FormularioDetalheVenda extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
-       this.dispose();
+    jProgressBar1.setIndeterminate(true); // Ativa o modo indeterminado 
+    new Thread(() -> {
+    try {     
        int id = Integer.valueOf(txtIdVenda.getText());
        new relatorios.Rel2viacupom(id);
+            Thread.sleep(1000); 
+            } catch (InterruptedException e) {
+            // Loga a interrupção da thread, caso aconteça
+                e.printStackTrace();
+            } finally {
+                // Finaliza a barra de progresso
+                SwingUtilities.invokeLater(() -> jProgressBar1.setIndeterminate(false));
+                this.dispose(); // Fecha a janela atual
+            }
+        }).start();
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**

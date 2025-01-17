@@ -11,6 +11,7 @@ import br.com.sistema.ultilitarios.Ultilitarios;
 import java.awt.event.KeyEvent;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -968,8 +969,20 @@ public class FormularioFornecedores extends javax.swing.JDialog {
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
-       this.dispose();
-       new relatorios.RelFornecedores();
+    jProgressBar1.setIndeterminate(true); // Ativa o modo indeterminado 
+    new Thread(() -> {
+    try {     
+        new relatorios.RelFornecedores();
+        Thread.sleep(1000); 
+            } catch (InterruptedException e) {
+            // Loga a interrupção da thread, caso aconteça
+                e.printStackTrace();
+            } finally {
+                // Finaliza a barra de progresso
+                SwingUtilities.invokeLater(() -> jProgressBar1.setIndeterminate(false));
+                this.dispose(); // Fecha a janela atual
+            }
+        }).start();   
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
