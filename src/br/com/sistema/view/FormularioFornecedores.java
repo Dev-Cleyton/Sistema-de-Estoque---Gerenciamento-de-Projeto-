@@ -33,21 +33,21 @@ public class FormularioFornecedores extends javax.swing.JDialog {
      *
      * O método segue os seguintes passos:
      *
-     * 1. Cria um novo objeto {@link Fornecedores} e define seus atributos com
+     * 1. Cria um novo objeto {@link br.com.sistema.model.Fornecedores} e define seus atributos com
      * os valores capturados dos campos da interface gráfica. 2. Tenta converter
      * o valor do campo `txtNumero` para um número inteiro. Se houver uma
      * exceção de formato inválido (número mal formatado), exibe uma mensagem de
      * erro e interrompe a execução. 3. Chama o método `salvarDao` da classe
      * {@link FornecedoresDAO} para persistir os dados do cliente no banco de
-     * dados. 4. Após o salvamento, utiliza a classe {@link Ultilitarios} para
+     * dados. 4. Após o salvamento, utiliza a classe {@link br.com.sistema.ultilitarios.Ultilitarios} para
      * limpar os campos da interface gráfica.
      *
      * Exemplo de uso:
      *
      * ``` Salvar(); ```
      *
-     * @see FornecedoresDAO#salvarDao(Fornecedores)
-     * @see Ultilitarios#LimparTela(javax.swing.JPanel)
+     * @see br.com.sistema.dao.FornecedoresDAO#SalvarFornecedoresDao(br.com.sistema.model.Fornecedores) 
+     * @see br.com.sistema.ultilitarios.Ultilitarios#LimparTela(javax.swing.JPanel) 
      */
     public void Salvar() {
         // 1º Criar um novo objeto Fornecedores e definir seus atributos a partir dos campos da interface gráfica
@@ -98,10 +98,10 @@ public class FormularioFornecedores extends javax.swing.JDialog {
      * Passos do método:
      *
      * 1. Coleta os dados da interface gráfica (campos de texto) e atribui ao
-     * objeto {@link Fornecedores}. 2. Valida o campo "Número", exibindo uma
+     * objeto {@link br.com.sistema.model.Fornecedores}. 2. Valida o campo "Número", exibindo uma
      * mensagem de erro caso o valor inserido seja inválido. 3. Atualiza os
      * dados do Fornecedores no banco de dados utilizando o método
-     * {@link FornecedoresDAO#EditarDao(Fornecedores)}. 4. Após a edição, o
+     * {@link br.com.sistema.dao.FornecedoresDAO#EditarFornecedoreDao(br.com.sistema.model.Fornecedores)}. 4. Após a edição, o
      * formulário é limpo para evitar duplicação de dados na interface.
      *
      * Exemplo de uso:
@@ -109,8 +109,8 @@ public class FormularioFornecedores extends javax.swing.JDialog {
      * ``` // O usuário preenche os campos da interface gráfica e pressiona o
      * botão de editar editar(); ```
      *
-     * @see Fornecedores
-     * @see FornecedoresDAO
+     * @see br.com.sistema.model.Fornecedores
+     * @see br.com.sistema.dao.FornecedoresDAO
      */
     public void Editar() {
         // 1º Criar um novo objeto Fornecedores e definir seus atributos a partir dos campos da interface gráfica
@@ -196,12 +196,12 @@ public class FormularioFornecedores extends javax.swing.JDialog {
      * Este método permite pesquisar um Fornecedores pelo nome, preenchendo os
      * campos da interface gráfica com os dados do Fornecedores encontrado. A
      * busca é realizada chamando o método
-     * {@link FornecedoresDAO#BuscarFornecedoresDao(String)}, que acessa o banco
+     * {@link br.com.sistema.dao.FornecedoresDAO#BuscarFornecedoresDao(java.lang.String)}, que acessa o banco
      * de dados e retorna os dados do Fornecedores correspondente.
      *
      * O método segue os seguintes passos: 1. Obtém o nome do Fornecedores a ser
      * pesquisado a partir do campo de texto `txtNome`. 2. Cria uma instância de
-     * {@link FornecedoresDAO} para acessar os dados do Fornecedore. 3. Chama o
+     * {@link br.com.sistema.dao.FornecedoresDAO} para acessar os dados do Fornecedore. 3. Chama o
      * método `BuscarFornecedoreDao` com o nome fornecido para obter o cliente
      * do banco de dados. 4. Se um cliente for encontrado (verificado se o nome
      * não é `null`), os campos da interface gráfica são preenchidos com os
@@ -210,7 +210,7 @@ public class FormularioFornecedores extends javax.swing.JDialog {
      * contrário, uma mensagem de alerta é exibida, indicando que o cliente não
      * foi encontrado.
      *
-     * @see FornecedoresDAO#BuscarFornecedoreDao(String)
+     * @see br.com.sistema.dao.FornecedoresDAO#BuscarFornecedoresDao(java.lang.String) 
      */
     public void Pesquisar() {
         // Obtém o nome do Fornecedore a ser pesquisado a partir do campo de texto
@@ -252,17 +252,17 @@ public class FormularioFornecedores extends javax.swing.JDialog {
      * Lista todos os Fornecedores na tabela exibida na interface gráfica.
      *
      * Este método recupera a lista de Fornecedores do banco de dados usando a
-     * classe {@link FornecedoresDAO} e atualiza a tabela na interface gráfica com
+     * classe {@link br.com.sistema.dao.FornecedoresDAO} e atualiza a tabela na interface gráfica com
      * os dados dos Fornecedores.
      *
      * O método segue os seguintes passos: 1. Cria uma instância de
-     * {@link FornecedoresDAO} para acessar os dados dos clientes. 2. Obtém a lista
-     * de clientes chamando o método {@link FornecedoresDAO#listar()}. 3. Obtém o
-     * modelo da tabela associada ao componente {@link JTable} e limpa as linhas
+     * {@link br.com.sistema.dao.FornecedoresDAO} para acessar os dados dos clientes. 2. Obtém a lista
+     * de clientes chamando o método {@link br.com.sistema.dao.FornecedoresDAO#ListarFornecedoreDao() }. 3. Obtém o
+     * modelo da tabela associada ao componente {@link javax.swing.JTable} e limpa as linhas
      * existentes. 4. Adiciona uma nova linha para cada Fornecedore na lista,
      * preenchendo a tabela com os dados do cliente.
      *
-     * @see ClientesDAO#listar()
+     * @see br.com.sistema.dao.FornecedoresDAO#ListarFornecedoreDao() 
      */
     public void listar() {
         // Cria uma instância de FornecedoresDAO para acessar os dados dos clientes
@@ -308,14 +308,14 @@ public class FormularioFornecedores extends javax.swing.JDialog {
      * O método segue os seguintes passos: 1. Obtém o texto de pesquisa do campo
      * de texto `txtPesquisaNome` e formata o padrão de nome com caracteres
      * coringa (`%`) para realizar a busca parcial. 2. Cria uma instância da
-     * classe {@link FornecedoresDAO} para acessar os dados dos Fornecedores. 3. Obtém a
+     * classe {@link br.com.sistema.dao.FornecedoresDAO} para acessar os dados dos Fornecedores. 3. Obtém a
      * lista de Fornecedores filtrados chamando o método
-     * {@link FornecedoresDAO#filtar(String)} com o padrão de nome formatado. 4.
-     * Obtém o modelo da tabela associada ao componente {@link JTable} e limpa
+     * {@link br.com.sistema.dao.FornecedoresDAO#FiltarFornecedoresDao(java.lang.String)} com o padrão de nome formatado. 4.
+     * Obtém o modelo da tabela associada ao componente {@link javax.swing.JTable} e limpa
      * todas as linhas existentes. 5. Adiciona uma nova linha na tabela para
      * cada cliente na lista, preenchendo a tabela com os dados do Fornecedores.
      *
-     * @see FornecedoresDAO#filtar(String)
+     * @see br.com.sistema.dao.FornecedoresDAO#FiltarFornecedoresDao(java.lang.String) 
      */
     public void filtrar() {
         // Obtém o texto de pesquisa do campo de texto e formata o padrão de nome com caracteres coringa
@@ -967,7 +967,7 @@ public class FormularioFornecedores extends javax.swing.JDialog {
         Excluir();
 
     }//GEN-LAST:event_btnExcluirActionPerformed
-
+    
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
     jProgressBar1.setIndeterminate(true); // Ativa o modo indeterminado 
     new Thread(() -> {

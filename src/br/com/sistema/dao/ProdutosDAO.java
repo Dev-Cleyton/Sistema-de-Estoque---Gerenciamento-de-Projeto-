@@ -193,13 +193,13 @@ public class ProdutosDAO {
      *
      * Exemplo de uso:
      *
-     * ``` // Chamando o método para obter a lista de produtos List<Produtos>
+     * ``` // Chamando o método para obter a lista de produtos 
+     * {@link br.com.sistema.view.FormularioProdutos#listar()}    
      * produtos = dao.ListarProdutoDao(); ```
-     *
      * @return lista de produtos com seus respectivos fornecedores, ou `null` se
      * houver um erro.
-     * @see Produtos
-     * @see Fornecedores
+     * @see br.com.sistema.view.FormularioProdutos
+     * @see br.com.sistema.model.Fornecedores
      */
     public List<Produtos> ListarProdutoDao() {
         // 1º Criar a lista que irá armazenar os produtos

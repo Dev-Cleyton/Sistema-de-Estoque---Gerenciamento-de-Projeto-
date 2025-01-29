@@ -15,8 +15,11 @@ import javax.swing.JOptionPane;
 public class FormularioTotalDoDia extends javax.swing.JDialog {
 
     /**
-     * Creates new form FormularioTotalDoDia
-     */
+ * Cria um novo formulário de detalhes da venda.
+ *
+ * @param parent O frame pai do qual este diálogo depende.
+ * @param modal Indica se o diálogo deve ser modal (bloqueando a interação com a janela principal).
+ */
     public FormularioTotalDoDia(java.awt.Frame parent,boolean modal) {
         super(parent,modal);
         initComponents();

@@ -39,21 +39,21 @@ public class FormularioEstoque extends javax.swing.JDialog {
      *
      * O método segue os seguintes passos:
      *
-     * 1. Cria um novo objeto {@link Clientes} e define seus atributos com os
+     * 1. Cria um novo objeto {@link br.com.sistema.model.Clientes} e define seus atributos com os
      * valores capturados dos campos da interface gráfica. 2. Tenta converter o
      * valor do campo `txtNumero` para um número inteiro. Se houver uma exceção
      * de formato inválido (número mal formatado), exibe uma mensagem de erro e
      * interrompe a execução. 3. Chama o método `salvarDao` da classe
-     * {@link ClientesDAO} para persistir os dados do cliente no banco de dados.
-     * 4. Após o salvamento, utiliza a classe {@link Ultilitarios} para limpar
+     * {@link br.com.sistema.dao.ClientesDAO} para persistir os dados do cliente no banco de dados.
+     * 4. Após o salvamento, utiliza a classe {@link br.com.sistema.ultilitarios.Ultilitarios} para limpar
      * os campos da interface gráfica.
      *
      * Exemplo de uso:
      *
      * ``` Salvar(); ```
      *
-     * @see ClientesDAO#salvarDao(Clientes)
-     * @see Ultilitarios#LimparTela(javax.swing.JPanel)
+     * @see br.com.sistema.dao.ClientesDAO#SalvarClienteDao(br.com.sistema.model.Clientes)  
+     * @see br.com.sistema.ultilitarios.Ultilitarios#LimparTela(javax.swing.JPanel) 
      */
     public void Salvar() {
         // 1º Criar um novo objeto Clientes e definir seus atributos a partir dos campos da interface gráfica
@@ -187,17 +187,17 @@ public class FormularioEstoque extends javax.swing.JDialog {
      * Lista todos os clientes na tabela exibida na interface gráfica.
      *
      * Este método recupera a lista de clientes do banco de dados usando a
-     * classe {@link ClientesDAO} e atualiza a tabela na interface gráfica com
+     * classe {@link br.com.sistema.dao.ClientesDAO} e atualiza a tabela na interface gráfica com
      * os dados dos clientes.
      *
      * O método segue os seguintes passos: 1. Cria uma instância de
-     * {@link ClientesDAO} para acessar os dados dos clientes. 2. Obtém a lista
-     * de clientes chamando o método {@link ClientesDAO#listar()}. 3. Obtém o
-     * modelo da tabela associada ao componente {@link JTable} e limpa as linhas
+     * {@link br.com.sistema.dao.ClientesDAO} para acessar os dados dos clientes. 2. Obtém a lista
+     * de clientes chamando o método {@link br.com.sistema.dao.ClientesDAO#ListarClienteDao() }. 3. Obtém o
+     * modelo da tabela associada ao componente {@link javax.swing.JTable} e limpa as linhas
      * existentes. 4. Adiciona uma nova linha para cada cliente na lista,
      * preenchendo a tabela com os dados do cliente.
      *
-     * @see ClientesDAO#listar()
+     * @see br.com.sistema.dao.ClientesDAO#ListarClienteDao() 
      */
     public void listar() {
         // Cria uma instância de ProdutosDAO para acessar os dados dos Produtos
@@ -235,14 +235,14 @@ public class FormularioEstoque extends javax.swing.JDialog {
      * O método segue os seguintes passos: 1. Obtém o texto de pesquisa do campo
      * de texto `txtPesquisaNome` e formata o padrão de nome com caracteres
      * coringa (`%`) para realizar a busca parcial. 2. Cria uma instância da
-     * classe {@link ClientesDAO} para acessar os dados dos clientes. 3. Obtém a
+     * classe {@link br.com.sistema.dao.ClientesDAO} para acessar os dados dos clientes. 3. Obtém a
      * lista de clientes filtrados chamando o método
-     * {@link ClientesDAO#filtar(String)} com o padrão de nome formatado. 4.
-     * Obtém o modelo da tabela associada ao componente {@link JTable} e limpa
+     * {@link br.com.sistema.dao.ClientesDAO#FiltarClienteDao(java.lang.String)} com o padrão de nome formatado. 4.
+     * Obtém o modelo da tabela associada ao componente {@link javax.swing.JTable} e limpa
      * todas as linhas existentes. 5. Adiciona uma nova linha na tabela para
      * cada cliente na lista, preenchendo a tabela com os dados do cliente.
      *
-     * @see ClientesDAO#filtar(String)
+     * @see br.com.sistema.dao.ClientesDAO#FiltarClienteDao(java.lang.String) 
      */
    /* public void filtrar() {
         // Obtém o texto de pesquisa do campo de texto e formata o padrão de nome com caracteres coringa
@@ -269,7 +269,12 @@ public class FormularioEstoque extends javax.swing.JDialog {
             });
         }
     }*/
-
+/**
+ * Cria um novo formulário de detalhes da venda.
+ *
+ * @param parent O frame pai do qual este diálogo depende.
+ * @param modal Indica se o diálogo deve ser modal (bloqueando a interação com a janela principal).
+ */
     public FormularioEstoque(java.awt.Frame parent,boolean modal) {
         super(parent,modal);
         initComponents();
@@ -670,7 +675,7 @@ public class FormularioEstoque extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null,"Erro" + e);            
         }
     }//GEN-LAST:event_btnAdicionarActionPerformed
-
+    
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
     jProgressBar1.setIndeterminate(true); // Ativa o modo indeterminado 
     new Thread(() -> {
