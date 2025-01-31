@@ -47,7 +47,7 @@ public class ProdutosDAO {
 * <img src="doc-files/SalvarProdutoDao.png" alt="Diagrama do sistema">
 * </p>
 * 
- * @param obj 
+ * @param obj Recebe um objeto do tipo Produtos
  */
     public void SalvarProdutoDao(Produtos obj) {
         try {
@@ -83,7 +83,7 @@ public class ProdutosDAO {
     * </p>
     * 
      * 
-     * @param obj 
+     * @param obj  Recebe um Objeto do tipo Produto
      */
     public void EditarProdutoDao(Produtos obj) {
         try {
@@ -119,7 +119,7 @@ public class ProdutosDAO {
     * <img src="doc-files/ExcluirProdutoDao.png" alt="Diagrama do sistema">
     * </p>
     * 
-     * @param obj 
+     * @param obj Recebe um objeto do tipo Produtos
      */
     public void ExcluirProdutoDao(Produtos obj) {
         try {
@@ -145,8 +145,8 @@ public class ProdutosDAO {
     }
     /**
      * BuscarProdutoDao
-     * @param nome
-     * @return 
+     * @param nome Recebe um Nome do Clinte para realizar a busca do Produto
+     * @return Retorna um objeto do tipo Produto 
      */
     public Produtos BuscarProdutoDao(String nome) {
         try {
@@ -188,8 +188,9 @@ public class ProdutosDAO {
      * <p>
      * <img src="doc-files/BuscarProdutoDao.png" alt="Diagrama do sistema">
      * </p>
-     * @param id
-     * @return 
+     * 
+     * @param id Recebe uma Id de Produtos 
+     * @return Retorna um objeto do tipo Produtos
      */
     public Produtos BuscarProdutoCodDao(int id) {
         try {
@@ -310,8 +311,8 @@ public class ProdutosDAO {
      * <p>
      * <img src="doc-files/FiltarProdutoDao.png" alt="Diagrama do sistema">
      * </p>
-     * @param nome
-     * @return 
+     * @param nome Recebe um nome de produto para realizar a busca 
+     * @return Retorna uma Lista de produtos 
      */
     public List<Produtos> FiltarProdutoDao(String nome) {
         List<Produtos> lista = new ArrayList<>();
@@ -359,8 +360,8 @@ public class ProdutosDAO {
      * <p>
      * <img src="doc-files/adicionarEstoque.png" alt="Diagrama do sistema">
      * </p>    
-     * @param id
-     * @param qtd_nova 
+     * @param id Recebe um Id do Cliente
+     * @param qtd_nova  Recebe a quantidade De produtos 
      */
     public void adicionarEstoque(int id, int qtd_nova) {
         try {
@@ -390,8 +391,8 @@ public class ProdutosDAO {
      * <p>
      * <img src="doc-files/baixaEstoque.png" alt="Diagrama do sistema">
      * </p>
-     * @param id
-     * @param qtd_nova 
+     * @param id Recebe um Id de uma Produtos
+     * @param qtd_nova  Recebe a quantidade de Produtos no estoque 
      */
     public void baixaEstoque(int id, int qtd_nova) {
         try {

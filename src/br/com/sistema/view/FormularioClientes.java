@@ -352,7 +352,18 @@ public void Excluir() {
             });
         }
     }
-
+    /**
+     * FormularioClientes
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento dos Eventos:
+     * </p>
+     * <p>
+     * <img src="doc-files/MetodosFormulirioClientes.png" alt="Diagrama do sistema">
+     * </p>
+     * 
+     * @param parent Estili de janela modal 
+     * @param modal Recebe um JFrmae
+     */
     public FormularioClientes(java.awt.Frame parent,boolean modal) {
         super(parent,modal);
         initComponents();
@@ -1006,6 +1017,14 @@ public void Excluir() {
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
+     * MAIN
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento dos Eventos:
+     * </p>
+     * <p>
+     * <img src="doc-files/MetodosFormulirioClientesMain.png" alt="Diagrama do sistema">
+     * </p>
+     * 
      * @param args the command line arguments
      */
     public static void main(String args[]) {

@@ -488,6 +488,7 @@ public class FuncionariosDAO {
      * @param senha A senha do funcionário que está tentando fazer login.
      * @see br.com.sistema.view.AreaTrabalho
      * @see br.com.sistema.view.FormularioLogin
+     * @return retorna um boolean
      */
  public boolean efetuarLogin(String email, String senha) {
     try {
