@@ -21,6 +21,13 @@ import javax.swing.JOptionPane;
  * Esta classe é responsável por executar operações de banco de dados
  * relacionadas à entidade Funcionarios. Ela se conecta ao banco de dados
  * utilizando a classe ConexaoBanco e fornece métodos para salvar clientes.
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+ * </p>
+ * <p>
+ * <img src="doc-files/FornecedoresDAO.png" alt="Diagrama do sistema">
+ * </p>
+ * 
  * @author Cleyton
  */
 public class FornecedoresDAO {
