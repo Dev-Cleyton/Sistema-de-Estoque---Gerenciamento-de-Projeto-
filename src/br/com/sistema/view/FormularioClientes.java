@@ -15,7 +15,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 
 /**
- *
+ * 
  * @author cleyton
  */
 public class FormularioClientes extends javax.swing.JDialog {
@@ -41,7 +41,6 @@ public class FormularioClientes extends javax.swing.JDialog {
      *    {@link br.com.sistema.dao.ClientesDAO} para persistir os dados do cliente no banco de dados.
      * 4. Após o salvamento, utiliza a classe {@link br.com.sistema.ultilitarios.Ultilitarios} para limpar
      *    os campos da interface gráfica.
-     *
      * Exemplo de uso:
      * {@code Salvar();}
      *
@@ -978,7 +977,17 @@ public void Excluir() {
         Excluir();
 
     }//GEN-LAST:event_btnExcluirActionPerformed
-
+/**
+ * Eventos
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento do Eventos Do Formulario Cliente:
+ * </p>
+ * <p>
+ * <img src="doc-files/Eventos Do Formulario Cliente.png" alt="Diagrama do sistema">
+ * </p>
+ * 
+ * @param evt 
+ */
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
     jProgressBar1.setIndeterminate(true); // Ativa o modo indeterminado 
     new Thread(() -> {

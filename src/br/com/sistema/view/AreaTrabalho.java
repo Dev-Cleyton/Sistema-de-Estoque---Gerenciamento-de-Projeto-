@@ -12,8 +12,16 @@ import javax.swing.JOptionPane;
 
 
 /**
- *
+ * AreaTrabalho
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento da AreaTrabalho:
+ * </p>
+ * <p>
+ * <img src="doc-files/AreaTrabalho.png" alt="Diagrama do sistema">
+ * </p>
+ * 
  * @author cleyton
+ * 
  */
 public class AreaTrabalho extends javax.swing.JFrame {
 
