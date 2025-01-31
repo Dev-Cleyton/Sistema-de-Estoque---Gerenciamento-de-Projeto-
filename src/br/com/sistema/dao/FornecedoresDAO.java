@@ -16,12 +16,11 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**
- * Classe ClientesDAO
+ * Classe FornecedoresDAO
  *
  * Esta classe é responsável por executar operações de banco de dados
  * relacionadas à entidade Funcionarios. Ela se conecta ao banco de dados
  * utilizando a classe ConexaoBanco e fornece métodos para salvar clientes.
- *
  * @author Cleyton
  */
 public class FornecedoresDAO {
@@ -48,7 +47,14 @@ public class FornecedoresDAO {
      * consulta para salvar o Fornecedores no banco de dados. 4. Fecha a conexão
      * após a execução e exibe uma mensagem de sucesso. Em caso de erro, uma
      * mensagem de erro é exibida ao usuário.
-     *
+     * 
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+     * </p>
+     * <p>
+     * <img src="doc-files/SalvarFornecedoresDao.png" alt="Diagrama do sistema">
+     * </p>
+     * 
      * Exemplo de uso:
      *
      * ``` Funcionarios novoFornecedores = new Fornecedores();
@@ -112,7 +118,14 @@ public class FornecedoresDAO {
      * banco de dados. 4. Após a execução, a conexão com o banco é encerrada e
      * uma mensagem de sucesso é exibida. Caso ocorra um erro, uma mensagem de
      * erro é exibida.
-     *
+     * 
+     *  <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+     * </p>
+     * <p>
+     * <img src="doc-files/EditarFornecedoreDao.png" alt="Diagrama do sistema">
+     * </p>
+     * 
      * Exemplo de uso:
      *
      * ``` Funcionarios FornecedoreAtualizado = new Fornecedores();
@@ -176,7 +189,14 @@ public class FornecedoresDAO {
      * exclusão. 4. Fecha o {@link PreparedStatement} após a execução. 5. Exibe
      * uma mensagem de confirmação em caso de sucesso. 6. Em caso de erro, exibe
      * uma mensagem de erro contendo o detalhe da exceção.
-     *
+     * 
+     *  <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+     * </p>
+     * <p>
+     * <img src="doc-files/ExcluirFornecedoresDao.png" alt="Diagrama do sistema">
+     * </p>
+     * 
      * Exemplo de uso:
      *
      * ``` // Cria um objeto Fornecedore com o ID do clienteFornecedore que será excluído
@@ -214,7 +234,14 @@ public class FornecedoresDAO {
 
     /**
      * Busca um Fornecedores no banco de dados com base no nome fornecido.
-     *
+     *  
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+     * </p>
+     * <p>
+     * <img src="doc-files/BuscarFornecedoresDao.png" alt="Diagrama do sistema">
+     * </p>
+     * 
      * @param nome O nome do Fornecedores a ser buscado. Este parâmetro é utilizado
      * para encontrar o Fornecedores na tabela "tb_fornecedores".
      * @return Um objeto {@link Fornecedores} contendo os dados do Fornecedores
@@ -268,7 +295,14 @@ public class FornecedoresDAO {
      * {@link Fornecedores}. Cada registro da tabela é mapeado para um objeto
      * {@link Fornecedores}, que é adicionado a uma lista que é retornada ao final
      * do método.
-     *
+     * 
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+     * </p>
+     * <p>
+     * <img src="doc-files/ListarFornecedoreDao.png" alt="Diagrama do sistema">
+     * </p>
+     * 
      * @return Uma lista de objetos {@link Fornecedores} representando todos os
      * Fornecedores encontrados na tabela. Retorna {@code null} se ocorrer um
      * erro durante a consulta.
@@ -331,7 +365,14 @@ public class FornecedoresDAO {
      * obtém o resultado no `ResultSet`. 4. Itera sobre o `ResultSet`, mapeando
      * cada registro para um objeto {@link Fornecedores} e adiciona esses objetos a
      * uma lista. 5. Retorna a lista de clientes encontrados.
-     *
+     * 
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+     * </p>
+     * <p>
+     * <img src="doc-files/FiltarFornecedoresDao.png" alt="Diagrama do sistema">
+     * </p>
+     * 
      * @param nome O padrão de nome para filtrar os Fornecedores. Pode incluir
      * caracteres coringa (por exemplo, `%` para buscar qualquer sequência de
      * caracteres).

@@ -20,7 +20,12 @@ import javax.swing.JOptionPane;
  * Esta classe é responsável por executar operações de banco de dados
  * relacionadas à entidade Clientes. Ela se conecta ao banco de dados utilizando
  * a classe ConexaoBanco e fornece métodos para salvar clientes.
- *
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+ * </p>
+ * <p>
+ * <img src="doc-files/Classe%20ClienteDao.png" alt="Diagrama do sistema">
+ * </p>
  * @author Cleyton
  */
 public class ClientesDAO {
@@ -55,7 +60,14 @@ public class ClientesDAO {
  * // Definir os demais atributos do cliente
  * dao.salvarDao(novoCliente);
  * ```
+ *  <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+ * </p>
+ * <p>
+ * <img src="doc-files/SalvarClienteDao.png" alt="Diagrama do sistema">
+ * </p>
  * 
+ * Exemplo de uso:
  * @param obj O objeto {@link Clientes} contendo os dados do cliente a ser salvo.
  * 
  * @see Clientes
@@ -109,7 +121,13 @@ public void SalvarClienteDao(Clientes obj) {
  * 3. Executa a instrução SQL para efetivar a alteração no banco de dados.
  * 4. Após a execução, a conexão com o banco é encerrada e uma mensagem de sucesso é exibida. Caso ocorra um erro,
  *    uma mensagem de erro é exibida.
- * 
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+ * </p>
+ * <p>
+ * <img src="doc-files/EditarClienteDao.png" alt="Diagrama do sistema">
+ * </p> 
+ *
  * Exemplo de uso:
  * 
  * ```
@@ -175,7 +193,13 @@ public void EditarClienteDao(Clientes obj) {
  * 4. Fecha o {@link PreparedStatement} após a execução.
  * 5. Exibe uma mensagem de confirmação em caso de sucesso.
  * 6. Em caso de erro, exibe uma mensagem de erro contendo o detalhe da exceção.
- * 
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+ * </p>
+ * <p>
+ * <img src="doc-files/ExcluirClienteDao.png" alt="Diagrama do sistema">
+ * </p> 
+ *
  * Exemplo de uso:
  * 
  * ```
@@ -217,13 +241,19 @@ public void ExcluirClienteDao(Clientes obj) {
 
     /**
      * Busca um cliente no banco de dados com base no nome fornecido.
-     *
-     * @param nome O nome do cliente a ser buscado. Este parâmetro é utilizado
-     * para encontrar o cliente na tabela "tb_clientes".
-     * @return Um objeto {@link Clientes} contendo os dados do cliente
-     * encontrado. Retorna {@code null} se o cliente não for encontrado ou se
-     * ocorrer um erro durante a busca.
-     */
+    * <p>
+    * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+    * </p>
+    * <p>
+    * <img src="doc-files/BuscarClienteDao.png" alt="Diagrama do sistema">
+    * </p> 
+    * 
+    * @param nome O nome do cliente a ser buscado. Este parâmetro é utilizado
+    * para encontrar o cliente na tabela "tb_clientes".
+    * @return Um objeto {@link Clientes} contendo os dados do cliente
+    * encontrado. Retorna {@code null} se o cliente não for encontrado ou se
+    * ocorrer um erro durante a busca.
+    */
     public Clientes BuscarClienteDao(String nome) {
         try {
             // 1º Criar a consulta SQL para buscar um cliente pelo nome
@@ -262,7 +292,20 @@ public void ExcluirClienteDao(Clientes obj) {
         // Retornar null se ocorrer um erro ou se nenhum cliente for encontrado
         return null;
     }
-
+    /**
+     * Busca um cliente no banco de dados com base no cpf fornecido.
+    * <p>
+    * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+    * </p>
+    * <p>
+    * <img src="doc-files/BuscarClienteCPFDao.png" alt="Diagrama do sistema">
+    * </p> 
+    * @param cpf O nome do cliente a ser buscado. Este parâmetro é utilizado
+    * para encontrar o cliente na tabela "tb_clientes".
+    * @return Um objeto {@link Clientes} contendo os dados do cliente
+    * encontrado. Retorna {@code null} se o cliente não for encontrado ou se
+    * ocorrer um erro durante a busca.
+    * */
      public Clientes BuscarClienteCPFDao(String cpf) {
         try {
             // 1º Criar a consulta SQL para buscar um cliente pelo nome
@@ -309,6 +352,14 @@ public void ExcluirClienteDao(Clientes obj) {
      *
      * Este método executa uma consulta SQL para buscar todos os registros da
      * tabela `tb_clientes` e os armazena em uma lista de objetos
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+     * </p>
+     * <p>
+     * <img src="doc-files/ListarClienteDao.png" alt="Diagrama do sistema">
+     * </p> 
+     * 
+     * Exemplo:
      * {@link Clientes}. Cada registro da tabela é mapeado para um objeto
      * {@link Clientes}, que é adicionado a uma lista que é retornada ao final
      * do método.
@@ -376,7 +427,14 @@ public void ExcluirClienteDao(Clientes obj) {
      * obtém o resultado no `ResultSet`. 4. Itera sobre o `ResultSet`, mapeando
      * cada registro para um objeto {@link Clientes} e adiciona esses objetos a
      * uma lista. 5. Retorna a lista de clientes encontrados.
-     *
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+     * </p>
+     * <p>
+     * <img src="doc-files/FiltarClienteDao.png" alt="Diagrama do sistema">
+     * </p> 
+     * 
+     * Exemplo:
      * @param nome O padrão de nome para filtrar os clientes. Pode incluir
      * caracteres coringa (por exemplo, `%` para buscar qualquer sequência de
      * caracteres).
