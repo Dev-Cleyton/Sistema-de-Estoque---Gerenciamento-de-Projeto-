@@ -19,7 +19,14 @@ import java.util.List;
 
 
 /**
- *
+ * VendasDAO
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de VendasDAO:
+ * </p>
+ * <p>
+ * <img src="doc-files/VendasDAO.png" alt="Diagrama do sistema">
+ * </p>
+ * 
  * @author cleyton
  */
 public class VendasDAO {
@@ -48,7 +55,13 @@ public class VendasDAO {
      * liberar os recursos. 5. Exibe uma mensagem de sucesso caso a venda seja
      * salva corretamente. 6. Lança uma exceção se ocorrer algum erro ao
      * realizar a venda.
-     *
+    * <p>
+    * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de VendasDAO:
+    * </p>
+    * <p>
+    * <img src="doc-files/SalvarVendasDAO.png" alt="Diagrama do sistema">
+    * </p>
+     * 
      * Exemplo de uso:
      *
      * ``` Vendas obj = new Vendas(); obj.setId_Cliente(cliente); // Define o
@@ -104,7 +117,13 @@ public class VendasDAO {
      * executa a consulta. 3. Processa o `ResultSet` para obter o valor do maior
      * ID. 4. Armazena o valor do último ID encontrado e o retorna. 5. Lança uma
      * exceção em caso de erro durante o processo.
-     *
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de VendasDAO:
+     * </p>
+     * <p>
+     * <img src="doc-files/retonaUltimoIdVenda.png" alt="Diagrama do sistema">
+     * </p>
+     * 
      * Exemplo de uso:
      *
      * ``` int ultimoId = dao.retonaUltimoIdVenda(); System.out.println("O ID da
@@ -144,6 +163,12 @@ public class VendasDAO {
     
 /**
  * Método responsável por buscar o histórico de vendas entre duas datas.
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de VendasDAO:
+ * </p>
+ * <p>
+ * <img src="doc-files/historicoVendas.png" alt="Diagrama do sistema">
+ * </p>
  * 
  * @param data_inicio Data de início do intervalo de busca (formato LocalDate).
  * @param data_fim Data de fim do intervalo de busca (formato LocalDate).
@@ -203,7 +228,13 @@ public List<Vendas> historicoVendas(LocalDate data_inicio, LocalDate data_fim) {
 
 /**
  * Método responsável por calcular o total das vendas de um dia específico.
- *
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de VendasDAO:
+ * </p>
+ * <p>
+ * <img src="doc-files/posicaoDoDia.png" alt="Diagrama do sistema">
+ * </p>
+ * 
  * @param data_veda A data para a qual o total das vendas será calculado.
  * @return O valor total das vendas realizadas na data especificada.
  * @throws RuntimeException Se ocorrer um erro durante a execução da consulta SQL.

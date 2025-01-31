@@ -21,7 +21,13 @@ import javax.swing.JOptionPane;
  * Esta classe é responsável por executar operações de banco de dados
  * relacionadas à entidade Clientes. Ela se conecta ao banco de dados utilizando
  * a classe ConexaoBanco e fornece métodos para salvar clientes.
- *
+* <p>
+* O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+* </p>
+* <p>
+* <img src="doc-files/ProdutosDAO.png" alt="Diagrama do sistema">
+* </p>
+* 
  * @author Cleyton
  */
 public class ProdutosDAO {
@@ -32,7 +38,17 @@ public class ProdutosDAO {
     public ProdutosDAO() {
         this.conn = new ConexaoBanco().pegarConexao();
     }
-
+/**
+ * SalvarProdutoDao
+* <p>
+* O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+* </p>
+* <p>
+* <img src="doc-files/SalvarProdutoDao.png" alt="Diagrama do sistema">
+* </p>
+* 
+ * @param obj 
+ */
     public void SalvarProdutoDao(Produtos obj) {
         try {
             // 1º Definir a query SQL de inserção
@@ -57,7 +73,18 @@ public class ProdutosDAO {
             JOptionPane.showMessageDialog(null, "Erro ao salvar o Produto: " + e.getLocalizedMessage());
         }
     }
-
+    /**
+    * EditarProdutoDao 
+    * <p>
+    * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de ProdutosDAO:
+    * </p>
+    * <p>
+    * <img src="doc-files/EditarProdutoDao.png" alt="Diagrama do sistema">
+    * </p>
+    * 
+     * 
+     * @param obj 
+     */
     public void EditarProdutoDao(Produtos obj) {
         try {
             // 1º Definir a query SQL para atualizar os dados do cliente com base no ID
@@ -82,7 +109,18 @@ public class ProdutosDAO {
             JOptionPane.showMessageDialog(null, "Erro ao editar o Produto: " + e.getLocalizedMessage());
         }
     }
-
+    /**
+     * ExcluirPrdutoDao
+     * 
+     * <p>
+    * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de Produtos:
+    * </p>
+    * <p>
+    * <img src="doc-files/ExcluirProdutoDao.png" alt="Diagrama do sistema">
+    * </p>
+    * 
+     * @param obj 
+     */
     public void ExcluirProdutoDao(Produtos obj) {
         try {
             // 1º Preparar a instrução SQL para excluir um cliente baseado no ID
@@ -105,7 +143,11 @@ public class ProdutosDAO {
             JOptionPane.showMessageDialog(null, "Erro ao excluir o Produto: " + e.getLocalizedMessage());
         }
     }
-
+    /**
+     * BuscarProdutoDao
+     * @param nome
+     * @return 
+     */
     public Produtos BuscarProdutoDao(String nome) {
         try {
             // 1º Criar a consulta SQL para buscar um Produto pelo nome
@@ -138,7 +180,17 @@ public class ProdutosDAO {
         // Retornar null se ocorrer um erro ou se nenhum cliente for encontrado
         return null;
     }
-
+    /**
+     * 
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de Produtos:
+     * </p>
+     * <p>
+     * <img src="doc-files/BuscarProdutoDao.png" alt="Diagrama do sistema">
+     * </p>
+     * @param id
+     * @return 
+     */
     public Produtos BuscarProdutoCodDao(int id) {
         try {
             // 1º Criar a consulta SQL para buscar um Produto pelo nome
@@ -179,7 +231,12 @@ public class ProdutosDAO {
      * Este método busca todos os produtos cadastrados na tabela `tb_produtos` e
      * realiza uma junção (INNER JOIN) com a tabela `tb_fornecedores` para
      * associar os fornecedores aos produtos.
-     *
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de Produtos:
+     * </p>
+     * <p>
+     * <img src="doc-files/ListarProdutoDao.png" alt="Diagrama do sistema">
+     * </p>
      * Passos do método:
      *
      * 1. Cria a consulta SQL que realiza um INNER JOIN entre a tabela de
@@ -246,7 +303,16 @@ public class ProdutosDAO {
         // Retornar null se ocorrer um erro
         return null;
     }
-
+    /**
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de Produtos:
+     * </p>
+     * <p>
+     * <img src="doc-files/FiltarProdutoDao.png" alt="Diagrama do sistema">
+     * </p>
+     * @param nome
+     * @return 
+     */
     public List<Produtos> FiltarProdutoDao(String nome) {
         List<Produtos> lista = new ArrayList<>();
         try {
@@ -285,7 +351,17 @@ public class ProdutosDAO {
         // Retornar null se ocorrer um erro
         return null;
     }
-
+    /**
+     * 
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de Produtos:
+     * </p>
+     * <p>
+     * <img src="doc-files/adicionarEstoque.png" alt="Diagrama do sistema">
+     * </p>    
+     * @param id
+     * @param qtd_nova 
+     */
     public void adicionarEstoque(int id, int qtd_nova) {
         try {
             String sql = "update tb_produtos set qtd_estoque=? where id = ?";
@@ -306,7 +382,17 @@ public class ProdutosDAO {
             JOptionPane.showMessageDialog(null, "Erro ao adicionar ao estoque: " + e.getLocalizedMessage());
         }
     }
-
+    /**
+     * 
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de Produtos:
+     * </p>
+     * <p>
+     * <img src="doc-files/baixaEstoque.png" alt="Diagrama do sistema">
+     * </p>
+     * @param id
+     * @param qtd_nova 
+     */
     public void baixaEstoque(int id, int qtd_nova) {
         try {
             String sql = "update tb_produtos set qtd_estoque=? where id = ?";
@@ -342,7 +428,13 @@ public class ProdutosDAO {
      * valor do ID do produto como parâmetro. 3. Executa a consulta SQL e obtém
      * o resultado. 4. Retorna a quantidade de estoque se o produto for
      * encontrado. 5. Lança uma exceção em caso de erro durante a execução.
-     *
+     * 
+     * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de Produtos:
+     * </p>
+     * <p>
+     * <img src="doc-files/retornaQtdAtualEstoque.png" alt="Diagrama do sistema">
+     * </p>
      * @param id O ID do produto cuja quantidade de estoque será consultada.
      * @return A quantidade atual de estoque do produto.
      * @throws RuntimeException Se ocorrer um erro ao realizar a consulta.

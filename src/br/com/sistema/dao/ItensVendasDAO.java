@@ -15,7 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+* Classe  ItensVendasDAO
+* <p>
+* O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+* </p>
+* <p>
+* <img src="doc-files/ItensVendasDAO.png" alt="Diagrama do sistema">
+* </p>
+* 
  * @author cleyton
  */
 public class ItensVendasDAO {
@@ -42,7 +49,13 @@ public class ItensVendasDAO {
      * fornecidos no objeto `ItensVendas`. 3. Executa a declaração SQL para
      * salvar os dados no banco. 4. Fecha a conexão com o banco após a execução.
      * 5. Lança uma exceção em caso de erro durante o processo.
-     *
+    * <p>
+     * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+    * </p>
+    * <p>
+    * <img src="doc-files/salvar.png" alt="Diagrama do sistema">
+    * </p>
+    * 
      * Exemplo de uso:
      *
      * ``` ItensVendas item = new ItensVendas(venda, produto, quantidade,
@@ -79,6 +92,13 @@ public class ItensVendasDAO {
     }
     /**
  * Método responsável por listar os itens de uma venda específica.
+ * 
+ * <p>
+ * O diagrama a seguir ilustra o fluxo do sistema para o gerenciamento de clientesDAO:
+ * </p>
+ * <p>
+ * <img src="doc-files/listaIntens.png" alt="Diagrama do sistema">
+ * </p>
  * 
  * @param venda_id ID da venda para a qual os itens serão listados.
  * @return Uma lista de objetos ItensVendas que representam os itens da venda.
